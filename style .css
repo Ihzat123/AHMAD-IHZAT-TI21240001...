@@ -1,0 +1,7 @@
+#rating span {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+#rating span:hover {
+  transform: scale(1.2);
+}

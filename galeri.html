@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wisata Daerahku | Galeri Wisata</title>
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- ===== HEADER ===== -->
+  <header class="bg-blue-700 text-white py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-xl font-bold">🌄 Wisata Daerahku</h1>
+      <nav class="space-x-4">
+        <a href="/wisata daerah.html" class="hover:underline">Beranda</a>
+        <a href="/destinasi wisata daerah.html" class="hover:underline">Destinasi</a>
+        <a href="/galeri.html" class="hover:underline text-yellow-300 font-semibold">Galeri</a>
+        <a href="kontak.html" class="hover:underline">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== GALERI ===== -->
+  <main class="container mx-auto py-12 px-4 text-center">
+    <h2 class="text-3xl font-semibold mb-6 text-blue-700">Galeri Wisata Daerah</h2>
+    <p class="mb-6 text-gray-700">Jelajahi keindahan destinasi unggulan daerah kami melalui galeri berikut:</p>
+
+    <!-- Tombol Show/Hide -->
+    <div class="mb-8">
+      <button id="btnTampil" class="btn-primary-custom mr-2">Tampilkan Semua Foto</button>
+      <button id="btnSembunyi" class="btn-primary-custom bg-red-500 text-white hover:bg-red-600">Sembunyikan Semua</button>
+    </div>
+
+    <!-- Grid Galeri -->
+    <div id="galeriContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Gambar 1 -->
+      <div class="galeri-item fade-in">
+        <img src="/img/download (5).jpg" alt="Pantai Indah" class="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition">
+      </div>
+      <!-- Gambar 2 -->
+      <div class="galeri-item fade-in">
+        <img src="/img/download (6).jpg" alt="Gunung Sejahtera" class="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition">
+      </div>
+      <!-- Gambar 3 -->
+      <div class="galeri-item fade-in">
+        <img src="/img/download (7).jpg" alt="Air Terjun Pelangi" class="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition">
+      </div>
+      <!-- Gambar 4 -->
+      <div class="galeri-item fade-in">
+        <img src="/img/download (8).jpg" alt="Danau Biru" class="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition">
+      </div>
+      <!-- Gambar 5 -->
+      <div class="galeri-item fade-in">
+        <img src="/img/download (9).jpg" alt="Desa Budaya Sukamaju" class="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition">
+      </div>
+      <!-- Gambar 6 -->
+      <div class="galeri-item fade-in">
+        <img src="/img/download (11).jpg" alt="Museum Sejarah Daerah" class="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition">
+      </div>
+      <!-- Gambar 7 -->
+      <div class="galeri-item fade-in">
+        <img src="/img/download (12).jpg" alt="Kebun Raya Tropis" class="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition">
+      </div>
+      <!-- Gambar 8 -->
+      <div class="galeri-item fade-in">
+        <img src="/img/download (13).jpg" alt="Kuliner Malam Kota Lama" class="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition">
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-blue-800 text-white py-6 mt-8">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Dinas Pariwisata Daerah. Semua hak cipta dilindungi.</p>
+      <div class="mt-2 space-x-3">
+        <a href="#" class="hover:underline">Facebook</a>
+        <a href="#" class="hover:underline">Instagram</a>
+        <a href="#" class="hover:underline">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPT ===== -->
+  <script src="c:\Users\fauza\Downloads\download.jpg"></script>
+  <script src="assets/js/script.js"></script>
+
+  <!-- ===== FITUR JAVASCRIPT ===== -->
+  <script>
+    const galeri = document.querySelectorAll('.galeri-item');
+    const btnTampil = document.getElementById('btnTampil');
+    const btnSembunyi = document.getElementById('btnSembunyi');
+
+    btnTampil.addEventListener('click', () => {
+      galeri.forEach(item => {
+        item.style.display = 'block';
+        item.classList.add('fade-in');
+      });
+    });
+
+    btnSembunyi.addEventListener('click', () => {
+      galeri.forEach(item => {
+        item.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>

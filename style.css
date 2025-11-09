@@ -1,0 +1,139 @@
+/* ==========================================================
+   Wisata Daerahku - Custom CSS
+   Tambahan gaya di luar Bootstrap & Tailwind
+   ========================================================== */
+
+/* ======= Global Style ======= */
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f9fafb; /* Tailwind gray-50 */
+  color: #1f2937; /* Tailwind gray-800 */
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ======= Header ======= */
+header {
+  background: linear-gradient(90deg, #1d4ed8, #2563eb); /* Tailwind blue-700 to blue-600 */
+  color: white;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #fde047; /* Tailwind yellow-300 */
+}
+
+/* ======= Hero Section ======= */
+section[style*="background-image"] {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+section[style*="background-image"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+section[style*="background-image"] > div {
+  position: relative;
+  z-index: 2;
+}
+
+/* ======= Card Wisata ======= */
+.card-wisata {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-wisata:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card-wisata img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ======= Tombol Utama ======= */
+.btn-primary-custom {
+  background-color: #fde047; /* yellow-300 */
+  color:#e2e4e8; /* blue-900 */
+  font-weight: 600;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: #facc15; /* yellow-400 */
+  transform: translateY(-2px);
+}
+
+/* ======= Footer ======= */
+footer {
+  background-color: #1e3a8a; /* Tailwind blue-800 */
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: #93c5fd; /* blue-300 */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #facc15; /* yellow-400 */
+}
+
+/* ======= Responsif Tambahan ======= */
+@media (max-width: 768px) {
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  section[style*="background-image"] {
+    height: 50vh;
+  }
+
+  .card-wisata img {
+    height: 160px;
+  }
+}
+
+/* ======= Animasi Tambahan ======= */
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
